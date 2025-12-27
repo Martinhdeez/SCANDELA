@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SCANDELA Shop - Explore our collection of handcrafted bags, necklaces and accessories with minimalist design.">
+    <meta name="keywords" content="bags, necklaces, jewelry, fashion, accessories, handmade, online shop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <title>Shop | SCANDELA</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#content" class="skip-link">Skip to content</a>
+
+    <!-- Header Placeholder -->
+    <header class="header" id="header-placeholder"></header>
+
+    <!-- Main Content -->
+    <main id="content" class="shop-page">
+        <!-- Page Title -->
+        <section class="page-header">
+            <h1 class="page-title">Shop</h1>
+        </section>
+
+        <!-- Filter Bar -->
+        <section class="filter-bar">
+            <div class="filter-container">
+                <nav class="filter-nav" aria-label="Filter products">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bolsos">Bags</button>
+                    <button class="filter-btn" data-filter="collares">Necklaces</button>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="products-grid shop-grid">
+                <!-- Bag -->
+                <article class="product-card" data-category="bolsos" id="bolsos">
+                    <a href="product-bag.html" class="product-link">
+                        <div class="product-image">
+                            <img src="img/bolsoPortada.jpeg" alt="Handcrafted Bag SCANDELA">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Natural Handcrafted Bag</h3>
+                            <p class="product-price">€60.00</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Necklace -->
+                <article class="product-card" data-category="collares" id="collares">
+                    <a href="product-necklace.html" class="product-link">
+                        <div class="product-image">
+                            <img src="img/collar.jpeg" alt="Handcrafted Necklace SCANDELA">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Unconventional Necklace</h3>
+                            <p class="product-price">€20.00</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bote - Coming Soon -->
+                <article class="product-card coming-soon" data-category="accesorios">
+                    <div class="product-link-disabled">
+                        <div class="product-image">
+                            <img src="img/boote.jpeg" alt="Bote SCANDELA">
+                            <div class="coming-soon-badge">Coming Soon</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Handcrafted Bote</h3>
+                            <p class="product-status">Coming soon</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Train Cup - Coming Soon -->
+                <article class="product-card coming-soon" data-category="accesorios">
+                    <div class="product-link-disabled">
+                        <div class="product-image">
+                            <img src="img/trainCup.jpeg" alt="Train Cup SCANDELA">
+                            <div class="coming-soon-badge">Coming Soon</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Train Cup</h3>
+                            <p class="product-status">Coming soon</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer class="footer" id="footer-placeholder"></footer>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+    <script>initComponents('shop');</script>
+</body>
+
+</html>

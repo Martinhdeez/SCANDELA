@@ -1,0 +1,154 @@
+/* =====================================================
+   SCANDELA - Shop Page Styles
+   Estilos específicos para la página de tienda
+   ===================================================== */
+
+/* ----- Shop Page Layout ----- */
+.shop-page {
+    min-height: 100vh;
+}
+
+/* ----- Filter Bar ----- */
+.filter-bar {
+    padding: 0 var(--space-6) var(--space-12);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-gray-200);
+    padding-bottom: var(--space-4);
+}
+
+.filter-nav {
+    display: flex;
+    gap: var(--space-8);
+}
+
+.filter-btn {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gray-400);
+    transition: color var(--transition-normal);
+    padding: var(--space-2) var(--space-4);
+    position: relative;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-black);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--color-black);
+}
+
+.filter-btn.active::after {
+    transform: scaleX(1);
+}
+
+/* ----- Products Section ----- */
+.products-section {
+    padding-bottom: var(--space-24);
+}
+
+.shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Coming Soon Products */
+.product-card.coming-soon {
+    opacity: 0.85;
+}
+
+.product-link-disabled {
+    display: block;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.coming-soon-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.product-status {
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    font-style: italic;
+}
+
+.coming-soon .product-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+/* Product card animation for filtering */
+.product-card {
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.product-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-nav {
+        gap: var(--space-4);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        font-size: var(--text-xs);
+        padding: var(--space-2);
+    }
+    
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+}

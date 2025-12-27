@@ -1,0 +1,159 @@
+/* =====================================================
+   SCANDELA - About Page Styles
+   Estilos específicos para la página Sobre Mí
+   ===================================================== */
+
+/* ----- About Page Layout ----- */
+.about-page {
+    min-height: 100vh;
+}
+
+/* ----- About Main Section ----- */
+.about-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-24);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.about-image-container {
+    position: relative;
+}
+
+.about-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 600px;
+}
+
+.about-text-container {
+    padding: var(--space-8);
+}
+
+.about-heading {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-8);
+}
+
+.about-paragraph {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: 1.9;
+    margin-bottom: var(--space-6);
+}
+
+.about-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* ----- Values Section ----- */
+.values-section {
+    background: var(--color-gray-100);
+    padding: var(--space-24) var(--space-6);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-12);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.value-card {
+    text-align: center;
+    padding: var(--space-8);
+}
+
+.value-title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-4);
+}
+
+.value-text {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+    line-height: 1.8;
+}
+
+/* ----- Process Section ----- */
+.process-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-24) var(--space-6);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.process-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-8);
+}
+
+.process-paragraph {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: 1.9;
+    margin-bottom: var(--space-6);
+}
+
+.process-placeholder {
+    aspect-ratio: 4/3;
+    min-height: 400px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px) {
+    .about-heading,
+    .process-title {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .about-text-container {
+        padding: var(--space-4) 0;
+    }
+    
+    .about-main-placeholder {
+        min-height: 350px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .process-image {
+        order: -1;
+    }
+    
+    .process-placeholder {
+        min-height: 300px;
+    }
+}

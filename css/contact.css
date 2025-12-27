@@ -1,0 +1,166 @@
+/* =====================================================
+   SCANDELA - Contact Page Styles
+   Estilos específicos para la página de Contacto
+   ===================================================== */
+
+/* ----- Contact Page Layout ----- */
+.contact-page {
+    min-height: 100vh;
+}
+
+/* ----- Contact Section ----- */
+.contact-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-24);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+}
+
+/* ----- Contact Info ----- */
+.contact-info {
+    padding: var(--space-8);
+}
+
+.contact-heading {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-6);
+}
+
+.contact-intro {
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    line-height: 1.8;
+    margin-bottom: var(--space-10);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.contact-item h3 {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-2);
+}
+
+.contact-item a,
+.contact-item p {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+}
+
+.contact-item a:hover {
+    color: var(--color-black);
+    opacity: 1;
+}
+
+/* ----- Contact Form ----- */
+.contact-form-container {
+    background: var(--color-gray-100);
+    padding: var(--space-10);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.form-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.05em;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: var(--space-4);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    border: 1px solid var(--color-gray-300);
+    background: var(--color-white);
+    transition: border-color var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-black);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-4) center;
+    padding-right: var(--space-10);
+    cursor: pointer;
+}
+
+.form-submit {
+    padding: var(--space-4) var(--space-8);
+    background: var(--color-black);
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: none;
+    transition: background var(--transition-normal);
+    align-self: flex-start;
+    margin-top: var(--space-4);
+}
+
+.form-submit:hover {
+    background: var(--color-gray-600);
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .contact-info {
+        padding: var(--space-4) 0;
+    }
+    
+    .contact-heading {
+        font-size: var(--text-2xl);
+    }
+    
+    .contact-form-container {
+        padding: var(--space-6);
+    }
+    
+    .form-submit {
+        width: 100%;
+        text-align: center;
+    }
+}

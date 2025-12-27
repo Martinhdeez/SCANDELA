@@ -1,0 +1,152 @@
+/* =====================================================
+   Collection Page Styles
+   ===================================================== */
+
+/* ----- Collection Page Layout ----- */
+.collection-page {
+    min-height: 100vh;
+}
+
+.page-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-gray-500);
+    margin-top: var(--space-4);
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+/* ----- Collection Gallery ----- */
+.collection-gallery {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-16) var(--space-6);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.gallery-item {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--color-gray-100);
+    transition: transform var(--transition-normal);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ----- Lightbox ----- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.lightbox-close:hover {
+    color: var(--color-gray-400);
+}
+
+/* ----- Call to Action Section ----- */
+.collection-cta {
+    text-align: center;
+    padding: var(--space-24) var(--space-6);
+    background: var(--color-gray-100);
+}
+
+.cta-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-4);
+}
+
+.cta-text {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-8);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .cta-title {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .page-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .cta-title {
+        font-size: var(--text-xl);
+    }
+    
+    .cta-text {
+        font-size: var(--text-base);
+    }
+}

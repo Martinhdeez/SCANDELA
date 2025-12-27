@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact SCANDELA - We're here to help you with any questions about our fashion accessories.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <title>Contact | SCANDELA</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#content" class="skip-link">Skip to content</a>
+
+    <!-- Header Placeholder -->
+    <header class="header" id="header-placeholder"></header>
+
+    <!-- Main Content -->
+    <main id="content" class="contact-page">
+        <!-- Page Title -->
+        <section class="page-header">
+            <h1 class="page-title">Contact</h1>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="contact-heading">Let's Talk</h2>
+                    <p class="contact-intro">
+                        Do you have any questions about our products?
+                        Need help with your order? I'm here to help you.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <a href="mailto:hello@scandela.com">hello@scandela.com</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Social Media</h3>
+                            <a href="https://instagram.com/scandelahernandez" target="_blank"
+                                rel="noopener noreferrer">@scandelahernandez</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Business Hours</h3>
+                            <p>Monday to Friday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-select">
+                                <option value="">Select an option</option>
+                                <option value="pedido">Order inquiry</option>
+                                <option value="producto">Product question</option>
+                                <option value="colaboracion">Collaboration</option>
+                                <option value="otro">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer class="footer" id="footer-placeholder"></footer>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script>initComponents('contact');</script>
+</body>
+
+</html>
