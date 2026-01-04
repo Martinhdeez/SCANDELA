@@ -80,7 +80,7 @@ function renderFooter() {
             <div class="footer-column">
                 <h3 class="footer-title">Contact</h3>
                 <ul class="footer-contact">
-                    <li><a href="mailto:hello@scandela.com">hello@scandela.com</a></li>
+                    <li><a href="mailto:scandelahernandezzz@gmail.com">scandelahernandezzz@gmail.com</a></li>
                 </ul>
             </div>
         </div>
