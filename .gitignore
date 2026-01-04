@@ -1,0 +1,18 @@
+# Backup files
+*_backup.*
+*_original.*
+*backup.*
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
