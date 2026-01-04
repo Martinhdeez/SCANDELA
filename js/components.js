@@ -36,7 +36,6 @@ function renderHeader(activePage = '') {
             <nav class="nav-right">
                 <ul class="nav-menu">
                     <li><a href="about.html" class="nav-link ${isActive('about')}">ABOUT</a></li>
-                    <li><a href="contact.html" class="nav-link ${isActive('contact')}">CONTACT</a></li>
                 </ul>
             </nav>
             
@@ -55,7 +54,6 @@ function renderHeader(activePage = '') {
                 <li><a href="shop.html#bolsos" class="mobile-link sub">Bags</a></li>
                 <li><a href="shop.html#collares" class="mobile-link sub">Necklaces</a></li>
                 <li><a href="about.html" class="mobile-link ${isActive('about')}">ABOUT</a></li>
-                <li><a href="contact.html" class="mobile-link ${isActive('contact')}">CONTACT</a></li>
             </ul>
         </nav>
     `;
