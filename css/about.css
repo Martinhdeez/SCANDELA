@@ -38,16 +38,16 @@
 }
 
 .about-heading {
-    font-size: var(--text-3xl);
+    font-size: var(--text-5xl);
     font-weight: var(--font-weight-bold);
     letter-spacing: 0.05em;
     margin-bottom: var(--space-8);
 }
 
 .about-paragraph {
-    font-size: var(--text-base);
+    font-size: var(--text-2xl);
     color: var(--color-gray-600);
-    line-height: 1.9;
+    line-height: 1.7;
     margin-bottom: var(--space-6);
 }
 
@@ -125,7 +125,11 @@
 @media (max-width: 1024px) {
     .about-heading,
     .process-title {
-        font-size: var(--text-2xl);
+        font-size: var(--text-4xl);
+    }
+    
+    .about-paragraph {
+        font-size: var(--text-xl);
     }
 }
 
@@ -134,6 +138,14 @@
     .process-grid {
         grid-template-columns: 1fr;
         gap: var(--space-8);
+    }
+    
+    .about-heading {
+        font-size: var(--text-3xl);
+    }
+    
+    .about-paragraph {
+        font-size: var(--text-lg);
     }
     
     .about-text-container {

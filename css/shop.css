@@ -65,8 +65,8 @@
 }
 
 .shop-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 

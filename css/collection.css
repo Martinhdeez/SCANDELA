@@ -15,11 +15,62 @@
     letter-spacing: 0.05em;
 }
 
-/* ----- Collection Gallery ----- */
-.collection-gallery {
+/* ----- Collection Sections ----- */
+.collection-section {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--space-16) var(--space-6);
+    margin: 0 auto var(--space-24);
+    padding: 0 var(--space-6);
+}
+
+.collection-title {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: var(--space-4);
+}
+
+/* ----- Lookbook Link ----- */
+.lookbook-link-container {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.lookbook-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-6);
+    border: 1px solid var(--color-black);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.05em;
+    transition: all var(--transition-normal);
+    background: transparent;
+}
+
+.lookbook-link:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+    opacity: 1;
+}
+
+.lookbook-icon {
+    font-size: var(--text-lg);
+}
+
+/* ----- Collection Video ----- */
+.collection-video {
+    max-width: 800px;
+    margin: var(--space-12) auto 0;
+}
+
+.collection-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-grid {
@@ -31,6 +82,7 @@
 .gallery-item {
     position: relative;
     aspect-ratio: 3/4;
+    min-height: 400px;
     overflow: hidden;
     background: var(--color-gray-100);
     transition: transform var(--transition-normal);
@@ -45,7 +97,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
+}
+
+/* Border for specific images with white backgrounds */
+.gallery-item.has-border {
+    border: 2px solid var(--color-black);
 }
 
 /* ----- Lightbox ----- */
